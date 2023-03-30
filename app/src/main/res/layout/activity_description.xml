@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Description">
+
+    <ImageView
+        android:id="@+id/xo_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/imagen3_png" />
+
+    <ImageView
+        android:id="@+id/image_food"
+        android:layout_width="408dp"
+        android:layout_height="234dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xo_description"
+        app:srcCompat="@color/orange_background" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="370dp"
+        android:layout_height="58dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Crabs with homemade fermentation
+kimchi"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_food" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="370dp"
+        android:layout_height="155dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Made of a base of sheep yogurt, wild  strawberries and sprinkled coffee.  On that basis, blue crabs that have been previously grilled. On top, the dish is finished adding  vegetables that have been fermented, the Korean kimchi. "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton_house"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        app:backgroundTint="@color/orange_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_baseline_house_24" />
+
+    <TextView
+        android:id="@+id/found_at"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#F8F2EB"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Can be found at"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_house"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.395" />
+
+    <ImageView
+        android:id="@+id/restaurant_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/found_at"
+        app:layout_constraintEnd_toEndOf="@+id/found_at"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/found_at"
+        app:layout_constraintVertical_bias="0.687"
+        app:srcCompat="@drawable/diverxo_png" />
+</androidx.constraintlayout.widget.ConstraintLayout>
