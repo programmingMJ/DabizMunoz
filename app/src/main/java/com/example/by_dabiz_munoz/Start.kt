@@ -8,4 +8,9 @@ class Start : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
     }
+
+    override fun onBackPressed() {
+        finish()
+        // Your logic here
+    }
 }
