@@ -9,22 +9,15 @@ import java.util.*
 class Start : AppCompatActivity() {
 
 
-
-//    lateinit var mediaPlayer : MediaPlayer? = null
-//    MediaPlayer mysound;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        //var mediaPlayer = MediaPlayer()
-        //mediaPlayer = MediaPlayer.create(applicationContext, R.raw.sonido_cocina)
-        //mediaPlayer.prepare()
-        //mediaPlayer.start()
-        /*val audioURL = "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
-        mediaPlayer = MediaPlayer()
-        mediaPlayer!!.setDataSource(audioURL)
-        mediaPlayer!!.prepare()
-        mediaPlayer!!.start()*/
+        /*var mediaPlayer = MediaPlayer()
+        mediaPlayer = MediaPlayer.create(this, R.raw.sonido_cocina)
+        mediaPlayer.prepare()
+        mediaPlayer.start()*/
+
 
     var timer = Timer();
     timer.schedule( object: TimerTask(){
@@ -34,7 +27,7 @@ class Start : AppCompatActivity() {
             startActivity(goMenu);
             finish();
         }
-    }, 10000);
+    }, 2000);
 
 
     }
