@@ -10,7 +10,7 @@ class Menu : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         val dishes: Button = findViewById(R.id.Dishes_button)
-        val recipes: Button = findViewById(R.id.Dishes_button)
+        val recipes: Button = findViewById(R.id.Recipes_button)
 
         dishes.setOnClickListener{
             startActivity(Intent(this, Dishes::class.java))
@@ -20,5 +20,8 @@ class Menu : AppCompatActivity() {
             startActivity(Intent(this, Recipes::class.java))
         }
     }
-
+    override fun onBackPressed() {
+        finish()
+        // Your logic here
+    }
 }
