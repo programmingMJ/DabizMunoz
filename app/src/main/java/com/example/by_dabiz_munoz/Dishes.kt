@@ -15,5 +15,9 @@ class Dishes : AppCompatActivity() {
             startActivity(Intent(this, Menu::class.java))
         }
 
+        val button_back: FloatingActionButton = findViewById(R.id.floatingActionButtonBack)
+        button_back.setOnClickListener{
+            startActivity(Intent(this, Menu::class.java))
+        }
     }
 }
