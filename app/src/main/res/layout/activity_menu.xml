@@ -10,32 +10,33 @@
         android:id="@+id/Dishes_button"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginTop="300dp"
+        android:backgroundTint="@color/orange_button"
         android:fontFamily="sans-serif-condensed"
         android:text="Dishes"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20sp"
-        android:backgroundTint="@color/orange_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toEndOf="@+id/Oval"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
 
     <Button
         android:id="@+id/Recipes_button"
         android:layout_width="160dp"
         android:layout_height="50dp"
+        android:backgroundTint="@color/orange_button"
         android:fontFamily="sans-serif-condensed"
         android:text="Recipes"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="20sp"
-        android:backgroundTint="@color/orange_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toEndOf="@+id/Oval"
         app:layout_constraintTop_toBottomOf="@+id/Dishes_button"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.04000002" />
 
     <ImageView
         android:id="@+id/Oval"
@@ -46,7 +47,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649"
         app:srcCompat="@drawable/oval" />
 
     <ImageView

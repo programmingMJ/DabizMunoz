@@ -18,15 +18,16 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton_house2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
         android:clickable="true"
         app:backgroundTint="@color/orange_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll_videos"
+        app:layout_constraintVertical_bias="0.9"
         app:srcCompat="@drawable/ic_baseline_house_24" />
 
     <TextView
@@ -43,7 +44,7 @@
 
     <ScrollView
         android:id="@+id/scroll_videos"
-        android:layout_width="407dp"
+        android:layout_width="0dp"
         android:layout_height="477dp"
         android:layout_marginTop="1dp"
         android:scrollbars="horizontal"

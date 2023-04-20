@@ -10,6 +10,7 @@
         android:id="@+id/xo_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/image_food"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,11 +18,12 @@
 
     <ImageView
         android:id="@+id/image_food"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="234dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/xo_description"
+        app:layout_constraintBottom_toTopOf="@id/title"
         app:srcCompat="@color/orange_background" />
 
     <TextView
@@ -35,7 +37,7 @@ kimchi"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintBottom_toTopOf="@id/description"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_food" />
 
@@ -48,19 +50,19 @@ kimchi"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/found_at"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton_house"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:clickable="true"
         app:backgroundTint="@color/orange_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/found_at"
         app:srcCompat="@drawable/ic_baseline_house_24" />
 
     <TextView
@@ -75,7 +77,6 @@ kimchi"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/floatingActionButton_house"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description"
         app:layout_constraintVertical_bias="0.395" />
@@ -86,7 +87,6 @@ kimchi"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/found_at"
         app:layout_constraintEnd_toEndOf="@+id/found_at"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/found_at"
         app:layout_constraintVertical_bias="0.687"
