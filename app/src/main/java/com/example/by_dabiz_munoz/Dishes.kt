@@ -79,7 +79,9 @@ class Dishes : AppCompatActivity(),PlateClickListener {
 
     }
 
-
+    override fun onBackPressed() {
+        finish()
+    }
 
 
 }

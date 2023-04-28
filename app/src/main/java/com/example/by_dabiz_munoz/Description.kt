@@ -27,7 +27,9 @@ class Description : AppCompatActivity() {
 
         val button_home: FloatingActionButton = findViewById(R.id.floatingActionButton_house)
         button_home.setOnClickListener{
+            finish()
             startActivity(Intent(this, Dishes::class.java))
+
         }
 
     }
@@ -39,5 +41,9 @@ class Description : AppCompatActivity() {
             return plate
     }
         return null
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }
