@@ -10,13 +10,25 @@ class Description : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDescriptionBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_description)
+        setContentView(binding.root)
 
-        val title = intent.getStringExtra("title")
-        val imageId = intent.getIntExtra("imageId",R.drawable.carrilleras)
+        val plateID = intent.getIntExtra(PLATE_ID_EXTRA,-1)
+        val plate =plateFromID(plateID)
+        if (plate!=null){
+            binding.title.text = plate.title
+            binding.imageFood.setImageResource(plate.imageId)
+            binding.description.text= plate.description
+            binding.foundAt.text= plate.restaurant
+        }
 
-        binding.title.text = title
-        binding.imageFood.setImageResource(imageId)
+    }
 
+    private fun plateFromID(plateID: Int): Plate? {
+    for(plate in plateList)
+    {
+        if(plate.id == plateID)
+            return plate
+    }
+        return null
     }
 }
