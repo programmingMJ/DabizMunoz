@@ -23,7 +23,8 @@ class Recipes : AppCompatActivity(),VideoClickListener {
 
         val recipesActivity = this
         binding.recyclerViewDishes.apply {
-            layoutManager = GridLayoutManager(applicationContext,1)
+            layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//            layoutManager = GridLayoutManager(applicationContext,1)
             adapter = VideoAdapter(videoList,recipesActivity)
         }
 
