@@ -2,18 +2,19 @@ package com.example.by_dabiz_munoz
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.by_dabiz_munoz.databinding.ActivityListItemBinding
+import com.example.by_dabiz_munoz.databinding.ActivityRecipesBinding
+import com.example.by_dabiz_munoz.databinding.VideoItemBinding
 
 class VideoViewHolder(
-//    private val listItemBinding: ActivityListItemBinding,
+    private val videoItemBinding:VideoItemBinding,
     private val clickListener: VideoClickListener
-) :RecyclerView.ViewHolder(listItemBinding.root)
+) :RecyclerView.ViewHolder(videoItemBinding.root)
 {
     fun bindVideo(video: Video)
     {
-        listItemBinding.foodImg.setImageResource(plate.imageId)
-        listItemBinding.nameFoodTxt.text=plate.title
+        videoItemBinding.videoImg.setImageResource(video.coverId)
 
-        listItemBinding.cardView.setOnClickListener{
+        videoItemBinding.cardViewVideo.setOnClickListener{
             clickListener.onClick(video)
         }
     }

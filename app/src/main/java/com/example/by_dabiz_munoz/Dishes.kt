@@ -56,7 +56,7 @@ class Dishes : AppCompatActivity(),PlateClickListener {
             "Sandwich Club",
             R.drawable.huevo,
             "Steamed ricotta and fried quail egg club sandwich with shichimi tōgarashi.",
-            R.drawable.goxo
+            R.drawable.logo_goxo_removebg_preview
         )
         plateList.add(plate3)
 
@@ -64,7 +64,7 @@ class Dishes : AppCompatActivity(),PlateClickListener {
             "Nigiri croqueta",
             R.drawable.nigiri,
             "sheep's milk nigiri croqueta, mille-feuille of salmon matured in jabugo fat, tomato jam and smoked tea",
-            R.drawable.streetxo
+            R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
         )
         plateList.add(plate4)
 
@@ -72,7 +72,7 @@ class Dishes : AppCompatActivity(),PlateClickListener {
             "Sabu sabu",
             R.drawable.sabbu,
             "chili crab-style octopus sabu sabu with paprika de la vera and Canarian potato",
-            R.drawable.streetxo
+            R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
         )
         plateList.add(plate5)
 
