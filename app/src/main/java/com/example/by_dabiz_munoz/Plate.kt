@@ -6,6 +6,6 @@ class Plate(
     var title:String,
     var imageId: Int,
     var description: String,
-    var restaurant: String,
+    var restaurantid: Int,
     val id: Int? = plateList.size)
 

@@ -26,31 +26,6 @@ class Dishes : AppCompatActivity(),PlateClickListener {
             adapter = CardAdapter(plateList,dishesActivity)
         }
 
-//
-//        for (i in title.indices){
-//            val plate = Plate(title[i],imageId[i],"a","a")
-//            plateArrayList.add(plate)
-//        }
-//
-//        binding.list.isClickable = true
-//        binding.list.adapter = MyAdapter(this,plateArrayList)
-//        binding.list.setOnItemClickListener{ parent, view, position, id->
-//
-//            val title =title[position]
-//            val imageId = imageId[position]
-//
-//            val i = Intent(this,Description::class.java)
-//
-//            i.putExtra("title",title)
-//            i.putExtra("imageId",imageId)
-//            startActivity(i)
-//        }
-
-
-        val button_home: FloatingActionButton = findViewById(R.id.floatingActionButton_house)
-        button_home.setOnClickListener{
-            startActivity(Intent(this, Menu::class.java))
-        }
 
         val button_back: FloatingActionButton = findViewById(R.id.floatingActionButtonBack)
         button_back.setOnClickListener{
@@ -64,46 +39,49 @@ class Dishes : AppCompatActivity(),PlateClickListener {
     }
     private fun ourPlates(){
         val plate1 = Plate(
-            "Carrilleras",
+            "Crabs (Blue and Royal)",
             R.drawable.carrilleras,
-            "description",
-            "Diverxo"
+            "Crabs (Blue and Royal) with home-fermented kimchis, sheep's yoghurt, wild strawberries and coffee",
+            R.drawable.diverxo_png
         )
         plateList.add(plate1)
         val plate2 = Plate(
-            "Carrilleras",
-            R.drawable.carrilleras,
-            "description",
-            "Diverxo"
+            "Jalapeño gazpacho",
+            R.drawable.gazpachoo,
+            "Jalapeño gazpacho with Motril shrimp, sea urchin, vanilla and coconut oil and the head of shrimp blanched in sake, Motril shrimp tartar, sea urchin, cut stick and jalapeño.",
+            R.drawable.diverxo_png
         )
         plateList.add(plate2)
         val plate3 = Plate(
-            "Carrilleras",
-            R.drawable.carrilleras,
-            "description",
-            "Diverxo"
+            "Sandwich Club",
+            R.drawable.huevo,
+            "Steamed ricotta and fried quail egg club sandwich with shichimi tōgarashi.",
+            R.drawable.goxo
         )
         plateList.add(plate3)
 
         val plate4 = Plate(
-            "Carrilleras",
-            R.drawable.carrilleras,
-            "description",
-            "Diverxo"
+            "Nigiri croqueta",
+            R.drawable.nigiri,
+            "sheep's milk nigiri croqueta, mille-feuille of salmon matured in jabugo fat, tomato jam and smoked tea",
+            R.drawable.streetxo
         )
         plateList.add(plate4)
 
         val plate5 = Plate(
-            "Carrilleras",
-            R.drawable.carrilleras,
-            "description",
-            "Diverxo"
+            "Sabu sabu",
+            R.drawable.sabbu,
+            "chili crab-style octopus sabu sabu with paprika de la vera and Canarian potato",
+            R.drawable.streetxo
         )
         plateList.add(plate5)
 
+
     }
 
-
+    override fun onBackPressed() {
+        finish()
+    }
 
 
 }

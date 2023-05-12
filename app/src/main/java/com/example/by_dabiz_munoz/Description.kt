@@ -1,8 +1,10 @@
 package com.example.by_dabiz_munoz
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.by_dabiz_munoz.databinding.ActivityDescriptionBinding
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class Description : AppCompatActivity() {
 
@@ -18,7 +20,16 @@ class Description : AppCompatActivity() {
             binding.title.text = plate.title
             binding.imageFood.setImageResource(plate.imageId)
             binding.description.text= plate.description
-            binding.foundAt.text= plate.restaurant
+            binding.restaurantImg.setImageResource(plate.restaurantid)
+        }
+
+
+
+        val button_home: FloatingActionButton = findViewById(R.id.floatingActionButton_house)
+        button_home.setOnClickListener{
+            finish()
+            startActivity(Intent(this, Dishes::class.java))
+
         }
 
     }
@@ -30,5 +41,9 @@ class Description : AppCompatActivity() {
             return plate
     }
         return null
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }

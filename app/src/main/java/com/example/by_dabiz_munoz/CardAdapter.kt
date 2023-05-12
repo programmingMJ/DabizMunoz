@@ -27,21 +27,3 @@ class CardAdapter(
 
     override fun getItemCount(): Int=plates.size
 }
-//    private val context : Activity,
-//                  private val arrayList: ArrayList<Plate>): ArrayAdapter<Plate> (context,
-//    R.layout.activity_list_item,arrayList){
-
-//
-//    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-//
-//        val inflater: LayoutInflater = LayoutInflater.from(context)
-//        val view: View = inflater.inflate(R.layout.activity_list_item,null);
-//
-//        val imageView : ImageView = view.findViewById(R.id.food_img)
-//        val name : TextView = view.findViewById(R.id.name_food_txt)
-//
-//        imageView.setImageResource(arrayList[position].imageId)
-//        name.text =arrayList[position].title
-//        return view
-//    }
-//}
