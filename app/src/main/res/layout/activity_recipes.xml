@@ -25,7 +25,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scroll_videos"
         app:layout_constraintVertical_bias="0.937"
         app:srcCompat="@drawable/ic_baseline_house_24" />
 
@@ -41,19 +40,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/xo_recipes" />
 
-    <ScrollView
-        android:id="@+id/scroll_videos"
-        android:layout_width="0dp"
-        android:layout_height="477dp"
-        android:layout_marginTop="1dp"
-        android:scrollbars="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_dishes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"/>
+<!--        //android:orientation="horizontal"-->
+<!--        //app:reverseLayout="true" -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+
+
+    <!--    <HorizontalScrollView
+            android:id="@+id/scroll_videos"
+            android:layout_width="0dp"
+            android:layout_height="477dp"
+            android:layout_marginTop="1dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <VideoView
+                    android:id="@+id/video1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </HorizontalScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
