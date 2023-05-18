@@ -47,10 +47,16 @@ class Recipes : AppCompatActivity(),VideoClickListener {
         videoList.add(video1)
 
         val video2 = Video(
-            R.drawable.oval_1,
+            R.drawable.fot_torrija,
             2
         )
         videoList.add(video2)
+
+        val video3 = Video(
+            R.drawable.oval_1,
+            2
+        )
+        videoList.add(video3)
     }
 
     override fun onBackPressed() {
