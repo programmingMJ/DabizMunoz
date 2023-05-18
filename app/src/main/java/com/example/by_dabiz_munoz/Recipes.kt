@@ -35,7 +35,7 @@ class Recipes : AppCompatActivity(),VideoClickListener {
         }
     }
     override fun onClick(video: Video) {
-        val intent = Intent(applicationContext,Description::class.java)
+        val intent = Intent(applicationContext,Video_repr::class.java)
         intent.putExtra(VIDEO_ID_EXTRA,video.id)
         startActivity(intent)
     }
