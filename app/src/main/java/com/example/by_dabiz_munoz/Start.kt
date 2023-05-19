@@ -13,25 +13,24 @@ class Start : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        var mediaPlayer = MediaPlayer()
-        mediaPlayer = MediaPlayer.create(this, R.raw.sonido_cocina)
+        val mediaPlayer: MediaPlayer = MediaPlayer.create(this, R.raw.sonido_cocina)
         //mediaPlayer.prepare()
         mediaPlayer.start()
 
 
-    var timer = Timer();
-    timer.schedule( object: TimerTask(){
+    val timer = Timer()
+        timer.schedule( object: TimerTask(){
         override fun run(){
             val goMenu = Intent(this@Start, Menu::class.java)
             //Intent intent =  Intent(Start.this, Menu.class);
-            startActivity(goMenu);
+            startActivity(goMenu)
             if (mediaPlayer.isPlaying()) {
                 //pause music
-                mediaPlayer.pause();
+                mediaPlayer.pause()
             }
-            finish();
+            finish()
         }
-    }, 8000);
+    }, 8000)
 
 
     }

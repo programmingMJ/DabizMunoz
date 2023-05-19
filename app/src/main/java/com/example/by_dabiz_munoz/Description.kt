@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.by_dabiz_munoz.databinding.ActivityDescriptionBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.squareup.picasso.Picasso
 
 class Description : AppCompatActivity() {
 
@@ -14,15 +15,19 @@ class Description : AppCompatActivity() {
         binding = ActivityDescriptionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val plateID = intent.getIntExtra(PLATE_ID_EXTRA,-1)
-        val plate =plateFromID(plateID)
-        if (plate!=null){
+        val screenWidth = resources.displayMetrics.widthPixels
+        val plateID = intent.getIntExtra(PLATE_ID_EXTRA, -1)
+        val plate = plateFromID(plateID)
+        if (plate != null) {
             binding.title.text = plate.title
-            binding.imageFood.setImageResource(plate.imageId)
-            binding.description.text= plate.description
+            Picasso.get()
+                .load(plate.imageId)
+                .resize(screenWidth, 0)
+                .onlyScaleDown()
+                .into(binding.imageFood)
+            binding.description.text = plate.description
             binding.restaurantImg.setImageResource(plate.restaurantid)
         }
-
 
 
         val button_home: FloatingActionButton = findViewById(R.id.floatingActionButton_house)
@@ -35,12 +40,10 @@ class Description : AppCompatActivity() {
     }
 
     private fun plateFromID(plateID: Int): Plate? {
-    for(plate in plateList)
-    {
-        if(plate.id == plateID)
-            return plate
-    }
-        return null
+        for(plate in plateList)
+            if(plate.id == plateID)
+                return plate
+            return null
     }
 
     override fun onBackPressed() {

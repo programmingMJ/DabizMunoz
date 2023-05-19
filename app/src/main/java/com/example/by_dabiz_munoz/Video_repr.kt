@@ -6,15 +6,28 @@ import android.os.Bundle
 import android.widget.MediaController
 import android.widget.VideoView
 
+
 class Video_repr : AppCompatActivity() {
+
+    var Videoview: VideoView? = null
+
+    var mediaControls: MediaController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_video_repr)
-        val videoView: VideoView = findViewById(R.id.video)
-        val mediaController =  MediaController(this)
-        mediaController.setAnchorView(videoView)
-        videoView.setMediaController(mediaController)
-        videoView.setVideoURI(Uri.parse("android.resourse://"+getPackageName()+"/"+R.raw.paella))
+
+        Videoview = findViewById<VideoView>(R.id.video) as VideoView
+
+        if (mediaControls == null) {
+            mediaControls = MediaController(this)
+
+            mediaControls!!.setAnchorView(this.Videoview)
+        }
+
+        Videoview!!.setMediaController(mediaControls)
+        Videoview!!.setVideoURI(Uri.parse("android.resource://" + packageName + "/" + R.raw.win))
+        Videoview!!.requestFocus()
+        Videoview!!.start()
     }
 }
