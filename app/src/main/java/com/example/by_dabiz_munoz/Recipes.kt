@@ -42,7 +42,7 @@ class Recipes : AppCompatActivity(),VideoClickListener {
     private fun ourVideos() {
         val video1 = Video(
             R.drawable.foto_paella,
-            1
+            R.raw.paella
         )
         videoList.add(video1)
 
