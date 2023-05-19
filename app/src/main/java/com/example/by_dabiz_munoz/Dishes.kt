@@ -3,8 +3,6 @@ package com.example.by_dabiz_munoz
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.View.OnClickListener
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.by_dabiz_munoz.databinding.ActivityDishesBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,8 +16,9 @@ class Dishes : AppCompatActivity(),PlateClickListener {
         binding = ActivityDishesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ourPlates()
-
+        if (plateList.isEmpty()) {
+            ourPlates()
+        }
         val dishesActivity = this
         binding.recyclerView.apply {
             layoutManager = GridLayoutManager(applicationContext,1)
@@ -60,21 +59,21 @@ class Dishes : AppCompatActivity(),PlateClickListener {
         )
         plateList.add(plate3)
 
-        val plate4 = Plate(
-            "Nigiri croqueta",
-            R.drawable.nigiri,
-            "sheep's milk nigiri croqueta, mille-feuille of salmon matured in jabugo fat, tomato jam and smoked tea",
-            R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
-        )
-        plateList.add(plate4)
+    val plate4 = Plate(
+        "Nigiri croqueta",
+        R.drawable.nigiri,
+        "sheep's milk nigiri croqueta, mille-feuille of salmon matured in jabugo fat, tomato jam and smoked tea",
+        R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
+    )
+    plateList.add(plate4)
 
-        val plate5 = Plate(
-            "Sabu sabu",
-            R.drawable.sabbu,
-            "chili crab-style octopus sabu sabu with paprika de la vera and Canarian potato",
-            R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
-        )
-        plateList.add(plate5)
+    val plate5 = Plate(
+        "Sabu sabu",
+        R.drawable.sabbu,
+        "chili crab-style octopus sabu sabu with paprika de la vera and Canarian potato",
+        R.drawable._92_2923622_streetxo_hd_png_download_png_removebg_preview
+    )
+    plateList.add(plate5)
 
 
     }
